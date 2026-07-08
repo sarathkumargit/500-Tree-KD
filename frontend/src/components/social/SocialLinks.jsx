@@ -1,11 +1,11 @@
-import { Facebook, Instagram, Linkedin, Youtube, MapPin } from 'lucide-react'
+import { Globe, Camera, Link, Video, MapPin } from 'lucide-react'
 import { socialLinks } from '../../data/socialLinks'
 
 const icons = {
-  facebook: Facebook,
-  instagram: Instagram,
-  linkedin: Linkedin,
-  youtube: Youtube,
+  facebook: Globe,
+  instagram: Camera,
+  linkedin: Link,
+  youtube: Video,
   google: MapPin,
 }
 
