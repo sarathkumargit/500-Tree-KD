@@ -3,7 +3,7 @@ import GlassPanel from '../common/GlassPanel'
 
 // Expanded, single-service view — used if you later add a /services/:id route
 const ServiceDetail = ({ service }) => (
-  <GlassPanel className="p-8">
+  <GlassPanel className="py-40">
     <h2 className="text-2xl font-semibold text-forest mb-3">{service.title}</h2>
     <p className="text-ink/70 leading-relaxed mb-6">{service.description}</p>
     <ul className="space-y-2">

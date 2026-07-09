@@ -29,16 +29,16 @@ const Navbar = () => {
           {BUSINESS_NAME}
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-6 ">
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.href}
               to={link.href}
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors ${
+                `text-xl font-medium transition-colors ${
                   scrolled
-                    ? isActive ? 'text-forest' : 'text-ink/60 hover:text-forest'
-                    : isActive ? 'text-canopy' : 'text-canopy/70 hover:text-canopy'
+                     ? isActive ? 'text-black' : 'text-ink/60 hover:text-forest'
+                     : isActive ? 'text-emerald-950' : 'text-canopy/70 hover: text-emerald-300'
                 }`
               }
             >
