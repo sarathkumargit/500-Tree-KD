@@ -32,6 +32,6 @@ export const services = [
     title: 'Emergency Tree Services',
     description: 'Rapid response for storm damage and fallen trees, available around the clock.',
     highlights: ['24/7 Response', 'Storm Damage'],
-    image: '/src/assets/images/services/emergency.jpg',
+    image: './src/assets/img6.jpeg',
   },
 ]

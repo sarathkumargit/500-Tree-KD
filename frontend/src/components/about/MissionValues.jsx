@@ -1,3 +1,4 @@
+import GlassPanel from '../common/GlassPanel'
 import Card from '../common/Card'
 
 const values = [
@@ -7,11 +8,15 @@ const values = [
 ]
 
 const MissionValues = () => (
-  <div className="grid md:grid-cols-3 gap-6">
-    {values.map((value) => (
-      <Card key={value.title} title={value.title} description={value.description} />
-    ))}
-  </div>
+  <section className="mt-4">
+    <GlassPanel dark className="p-8">
+      <div className=" grid md:grid-cols-3 gap-6">
+        {values.map((value) => (
+          <Card key={value.title} title={value.title} description={value.description} />
+        ))}
+      </div>
+    </GlassPanel>
+  </section>
 )
 
 export default MissionValues

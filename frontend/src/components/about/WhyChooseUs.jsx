@@ -9,12 +9,12 @@ const reasons = [
 ]
 
 const WhyChooseUs = () => (
-  <div className="rounded-3xl  bg-emerald-200">
-  <GlassPanel dark className="p-8 ">
-    <h3 className="text-xl font-semibold mb-5">Why Choose 500 Tree</h3>
+  <div className="rounded-3xl ">
+  <GlassPanel dark className="p-8  ">
+    <h3 className="text-xl  text-center font-semibold mb-5 ">Why Choose 500 Tree</h3>
     <ul className="space-y-3">
       {reasons.map((reason) => (
-        <li key={reason} className="flex items-start gap-3 text-sm text-canopy/85">
+        <li key={reason} className="  flex items-start gap-3 text-sm text-canopy/85">
           <Check size={16} className="text-gold mt-0.5 shrink-0" /> {reason}
         </li>
       ))}

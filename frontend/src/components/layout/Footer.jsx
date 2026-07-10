@@ -25,7 +25,7 @@ const footerColumns = [
 ]
 
 const Footer = () => (
-  <footer className="bg-emerald-900 text-emerald-300 mt-24">
+  <footer className="bg-emerald-900 text-emerald-300 mt-0">
     <div className="max-w-6xl mx-auto px-6 py-14 grid gap-10 md:grid-cols-4">
       <div>
         <p className="flex items-center gap-2 font-display font-semibold text-lg mb-3">

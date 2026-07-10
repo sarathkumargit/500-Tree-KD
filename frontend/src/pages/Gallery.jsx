@@ -1,12 +1,22 @@
-import Container from '../components/common/Container'
 import SectionHeading from '../components/common/SectionHeading'
-import GalleryGrid from '../components/gallery/GalleryGrid'
+import GalleryCarousel from '../components/gallery/GalleryCarousel'
 
 const Gallery = () => (
-  <Container className="py-20">
-    <SectionHeading eyebrow="Our Work" title="Project Gallery" description="A look at recent removals, trims, and restorations." />
-    <GalleryGrid />
-  </Container>
+  <section className="relative pt-40 pb-20 overflow-hidden">
+    <img
+      src="./src/assets/g2.png"
+      alt=""
+      className=" blur-md
+       absolute inset-0 w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-forest/85" />
+
+    
+   
+    <div className="relative z-10 py-0">
+      <GalleryCarousel />
+    </div>
+  </section>
 )
 
 export default Gallery

@@ -9,6 +9,12 @@ const previewIcons = { trimming: Scissors, pruning: Leaf, 'stump-removal': Circl
 
 const ServicesPreview = () => (
   <Container className="py-20 ">
+     <img
+    src="../../assets/hero1.jpg"
+    alt=""
+    className="absolute inset-0 w-full h-full object-cover blur-md scale-110"
+  />
+  <div className="absolute inset-0 bg-forest/50" />
     <SectionHeading
       eyebrow="What We Do"
       title="Professional Tree Care Services"

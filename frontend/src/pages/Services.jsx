@@ -1,22 +1,36 @@
 import Container from '../components/common/Container'
 import SectionHeading from '../components/common/SectionHeading'
+
+import LocationMap from '../components/locations/LocationMap'
 import ServiceList from '../components/services/ServiceList'
-import LocationList from '../components/locations/LocationList'
+import { SERVICE_RADIUS_MILES } from '../utils/constants'
+import bgImage from '../assets/img1.jpg'
 
-const Services = () => (
-  <Container className="py-20">
-    <SectionHeading
-      eyebrow="Our Services"
-      title="Full-Service Tree Care"
-      description="Every service is backed by certified arborists and a satisfaction guarantee."
+const Locations = () => (
+   <section className="relative overflow-hidden">
+    <img
+      src={bgImage}
+      alt=""
+     className="blur-sm absolute inset-0 w-full h-full object-cover scale-105"
     />
-    <ServiceList />
 
-    <div className="mt-20">
-      <SectionHeading eyebrow="Coverage" title="Service Locations" />
-      <LocationList />
-    </div>
-  </Container>
+    <Container className="relative z-10 py-40 text-center ">
+      <SectionHeading
+
+        eyebrow="KD 500 Tree"
+        title="Services & Locations"
+        description={`Coverage: ${SERVICE_RADIUS_MILES} mile radius across the metro area.`}
+      />
+      <ServiceList/>
+
+       <div className="mt-12 p-4 shadow-glass">
+        <LocationMap />
+      </div>
+  
+
+     
+    </Container>
+  </section>
 )
 
-export default Services
+export default Locations
