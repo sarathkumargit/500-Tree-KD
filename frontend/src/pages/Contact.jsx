@@ -4,7 +4,14 @@ import ContactInfo from '../components/contact/ContactInfo'
 import ContactForm from '../components/contact/ContactForm'
 
 const Contact = () => (
-  <Container className="py-20">
+  <section className="relative pt-10 pb-20 overflow-hidden">
+  <Container className="py-0">
+    <img
+      src="./src/assets/g2.png"
+      alt=""
+      className=" 
+       absolute inset-0 w-full h-full object-cover"
+    />
     <SectionHeading
       eyebrow="Get In Touch"
       title="Get in Touch with Experts"
@@ -15,6 +22,7 @@ const Contact = () => (
       <ContactForm />
     </div>
   </Container>
+  </section>
 )
 
 export default Contact

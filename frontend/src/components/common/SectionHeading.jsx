@@ -1,5 +1,5 @@
 const SectionHeading = ({ eyebrow, title, description, align = 'left' }) => {
- const wrapperClass = `mb-10 bg-emerald-400 p-6 rounded-3xl ${align === 'center' ? 'text-center mx-auto max-w-2xl' : ''}`
+  const wrapperClass = `mb-10 bg-emerald-400 p-6 rounded-3xl ${align === 'center' ? 'text-center mx-auto max-w-2xl' : ''}`
   return (
     <div className={wrapperClass}>
       {eyebrow && <p className="text-moss font-medium text-sm tracking-wide uppercase mb-2">{eyebrow}</p>}

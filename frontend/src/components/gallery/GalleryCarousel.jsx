@@ -9,7 +9,7 @@ const GalleryCarousel = () => {
   const goTo = (index) => setActive((index + total) % total)
 
   return (
-    <div className="relative w-full h-[640px] flex items-center justify-center overflow-hidden">
+    <div className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
       {galleryItems.map((item, i) => {
         let offset = i - active
         if (offset > total / 2) offset -= total
@@ -24,7 +24,7 @@ const GalleryCarousel = () => {
             onClick={() => (isActive ? null : goTo(i))}
             className="absolute rounded-3xl overflow-hidden shadow-glass transition-all duration-500 ease-out"
             style={{
-              width: isActive ? '380px' : '300px',
+              width: isActive ? '700px' : '300px',
               height: isActive ? '560px' : '460px',
               transform: `translateX(${offset * 220}px) scale(${isActive ? 1 : 0.85}) translateZ(${-Math.abs(offset) * 100}px)`,
               opacity: isVisible ? (isActive ? 1 : 0.5) : 0,

@@ -4,7 +4,7 @@ import { TreePine, Menu } from 'lucide-react'
 import GlassPanel from '../common/GlassPanel'
 import Button from '../common/Button'
 import MobileMenu from './MobileMenu'
-import { NAV_LINKS, BUSINESS_NAME } from '../../utils/constants'
+import { NAV_LINKS, BUSINESS_NAME,BUSINESS_LOGO} from '../../utils/constants'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -25,9 +25,10 @@ const Navbar = () => {
         }`}
       >
         <Link to="/" className={`flex items-center gap-2 font-display font-semibold text-lg ${scrolled ? 'text-forest' : 'text-canopy'}`}>
-          <TreePine size={22} className={scrolled ? 'text-moss' : 'text-emerald-300'} />
-          {BUSINESS_NAME}
-        </Link>
+          <img src={BUSINESS_LOGO} alt="Business Logo" className="h-12 rounded-3xl w-auto" />
+        
+         
+          </Link>
 
         <nav className="hidden md:flex items-center gap-6 ">
           {NAV_LINKS.map((link) => (

@@ -18,7 +18,7 @@ const About = () => (
       <SectionHeading eyebrow="About 500 Tree" title="KD Trusted Tree Care, Rooted in Experience" />
       <CompanyOverview />
       <MissionValues />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
     </Container>
   </section>
 )

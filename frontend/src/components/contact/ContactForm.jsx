@@ -1,40 +1,41 @@
+import { useEffect } from 'react'
 import GlassPanel from '../common/GlassPanel'
-import Button from '../common/Button'
-import FormField from './FormField'
-import useContactForm from '../../hooks/useContactForm'
-import { services } from '../../data/services'
+
+const FORM_SCRIPT_SRC = 'https://link.kdlead.com/js/form_embed.js'
 
 const ContactForm = () => {
-  const { values, errors, submitted, handleChange, handleSubmit } = useContactForm()
+  useEffect(() => {
+    const existingScript = document.querySelector(`script[src="${FORM_SCRIPT_SRC}"]`)
 
-  if (submitted) {
-    return (
-      <GlassPanel className="p-8 h-full flex items-center justify-center text-center">
-        <div>
-          <h3 className="text-xl font-semibold text-forest mb-2">Message sent</h3>
-          <p className="text-ink/70 text-sm">We typically respond within 24 business hours.</p>
-        </div>
-      </GlassPanel>
-    )
-  }
+    if (existingScript) {
+      return
+    }
+
+    const script = document.createElement('script')
+    script.src = FORM_SCRIPT_SRC
+    script.async = true
+    document.body.appendChild(script)
+  }, [])
 
   return (
-    <GlassPanel className="p-8">
-      <form onSubmit={handleSubmit} className="space-y-5">
-        <div className="grid sm:grid-cols-2 gap-4">
-          <FormField label="Full Name" name="fullName" placeholder="John Doe" value={values.fullName} onChange={handleChange} error={errors.fullName} />
-          <FormField label="Phone Number" name="phone" placeholder="(555) 000-0000" value={values.phone} onChange={handleChange} error={errors.phone} />
-        </div>
-        <div className="grid sm:grid-cols-2 gap-4">
-          <FormField label="Email Address" name="email" placeholder="john@example.com" value={values.email} onChange={handleChange} error={errors.email} />
-          <FormField as="select" label="Service Required" name="service" value={values.service} onChange={handleChange} error={errors.service}>
-            <option value="">Select a service</option>
-            {services.map((s) => <option key={s.id} value={s.id}>{s.title}</option>)}
-          </FormField>
-        </div>
-        <FormField as="textarea" rows={4} label="Tell us about your project" name="message" placeholder="How can we help you today?" value={values.message} onChange={handleChange} error={errors.message} />
-        <Button type="submit" variant="primary" className="w-full">Send Message</Button>
-      </form>
+    <GlassPanel className="p-4 sm:p-6 md:p-8" style={{ minHeight: '743px' }}>
+      <iframe
+        src="https://link.kdlead.com/widget/form/nOdPWeFORpEuZCVTUJxC"
+        style={{ width: '100%', height: '100%', border: 'none', borderRadius: '8px' }}
+        id="inline-nOdPWeFORpEuZCVTUJxC"
+        data-layout='{"id":"INLINE"}'
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Form 2"
+        data-height="743"
+        data-layout-iframe-id="inline-nOdPWeFORpEuZCVTUJxC"
+        data-form-id="nOdPWeFORpEuZCVTUJxC"
+        title="Form 2"
+      />
     </GlassPanel>
   )
 }

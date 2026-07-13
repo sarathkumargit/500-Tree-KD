@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
 
 const images = [
+  
   './src/assets/hero1.jpg',
   './src/assets/hero2.jpg',
   './src/assets/hero3.jpg',
   './src/assets/hero4.jpg',
+  './src/assets/land.png',
+  
 
 ]
 

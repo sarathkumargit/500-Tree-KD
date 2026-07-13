@@ -11,14 +11,14 @@ export const services = [
     title: 'Tree Trimming',
     description: 'Strategic thinning and shaping to enhance aesthetic appeal while promoting healthy growth.',
     highlights: ['Aesthetic Shaping', 'Canopy Thinning'],
-    image: './src/assets/img5.jpg',
+    image: './src/assets/hero7.jpg',
   },
   {
     id: 'pruning',
     title: 'Tree Pruning',
     description: 'Scientific pruning focused on removing diseased or non-productive stems to restore structural integrity.',
     highlights: ['Health Maintenance', 'Growth Direction'],
-    image: './src/assets/img6.jpeg',
+    image: './src/assets/img8.jpg',
   },
   {
     id: 'stump-removal',
