@@ -6,7 +6,7 @@ import Gallery from '../pages/Gallery'
 // import Locations from '../pages/Locations'
 import Contact from '../pages/Contact'
 import Terms from '../pages/Terms'
-import NotFound from '../pages/NotFound'
+//import NotFound from '../pages/NotFound'
 
 const AppRoutes = () => (
   <Routes>
@@ -17,7 +17,7 @@ const AppRoutes = () => (
     {/* <Route path="/locations" element={<Locations />} /> */}
     <Route path="/contact" element={<Contact />} />
     <Route path="/terms" element={<Terms />} />
-    <Route path="*" element={<NotFound />} />
+    {/* <Route path="*" element={<NotFound />} /> */}
   </Routes>
 )
 

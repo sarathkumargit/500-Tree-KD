@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react'
 
-const images = [
-  
-  './src/assets/hero1.jpg',
-  './src/assets/img8.jpg',
-  './src/assets/hero3.jpg',
-  './src/assets/hero4.jpg',
-  './src/assets/g2.png',
-  
+import hero1 from '../../assets/hero1.jpg'
+import hero3 from '../../assets/hero3.jpg'
+import hero4 from '../../assets/hero4.jpg'
+import img8 from '../../assets/img8.jpg'
+import g2 from '../../assets/g2.png'
 
+const images = [
+  hero1,
+  img8,
+  hero3,
+  hero4,
+  g2,
 ]
 
 // Coverflow-style 3D image stack: front image centered, others fanned

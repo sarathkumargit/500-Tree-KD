@@ -1,3 +1,4 @@
+import g2 from '../assets/g2.png'
 import Container from '../components/common/Container'
 import SectionHeading from '../components/common/SectionHeading'
 import ContactInfo from '../components/contact/ContactInfo'
@@ -7,7 +8,7 @@ const Contact = () => (
   <section className="relative pt-10 pb-20 overflow-hidden">
   <Container className="py-0">
     <img
-      src="./src/assets/g2.png"
+      src={g2}
       alt=""
       className=" 
        absolute inset-0 w-full h-full object-cover"

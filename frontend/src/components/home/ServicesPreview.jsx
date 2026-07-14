@@ -4,17 +4,15 @@ import Container from '../common/Container'
 import SectionHeading from '../common/SectionHeading'
 import Card from '../common/Card'
 import { services } from '../../data/services'
+import hero1 from '../../assets/hero1.jpg'
 
 const previewIcons = { trimming: Scissors, pruning: Leaf, 'stump-removal': CircleDot }
 
 const ServicesPreview = () => (
-  <Container className="py-20 ">
-     <img
-    src="../../assets/hero1.jpg"
-    alt=""
-    className="absolute inset-0 w-full h-full object-cover blur-md scale-110"
-  />
-  <div className="absolute inset-0 bg-forest/50" />
+  <section className="relative overflow-hidden bg-emerald-100">
+    <img src={hero1} alt="" className="absolute inset-0 w-full h-full object-cover blur-md scale-110" />
+    <div className="absolute inset-0 bg-forest/50" />
+    <Container className="relative z-10 py-20">
     <SectionHeading
       eyebrow="What We Do"
       title="Professional Tree Care Services"
@@ -37,7 +35,8 @@ const ServicesPreview = () => (
     <Link to="/services" className=" border-dashed border-emerald-400 border-2 px-6 rounded-full inline-block mt-8 text-moss font-medium hover:text-forest transition-colors">
       View all services →
     </Link>
-  </Container>
+    </Container>
+  </section>
 )
 
 export default ServicesPreview

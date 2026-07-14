@@ -1,10 +1,11 @@
+import g2 from '../assets/g2.png'
 import SectionHeading from '../components/common/SectionHeading'
 import GalleryCarousel from '../components/gallery/GalleryCarousel'
 
 const Gallery = () => (
   <section className="relative pt-40 pb-20 overflow-hidden">
     <img
-      src="./src/assets/g2.png"
+      src={g2}
       alt=""
       className=" blur-md
        absolute inset-0 w-full h-full object-cover"
