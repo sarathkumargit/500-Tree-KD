@@ -5,7 +5,7 @@ cat > .github/workflows/deploy.yml << 'EOF'
 on:
   push:
     branches: [main]
-
+     workflow_dispatch:
 permissions:
   contents: read
   pages: write
