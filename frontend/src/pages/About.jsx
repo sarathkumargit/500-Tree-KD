@@ -3,7 +3,7 @@ import SectionHeading from '../components/common/SectionHeading'
 import CompanyOverview from '../components/about/CompanyOverview'
 import MissionValues from '../components/about/MissionValues'
 import WhyChooseUs from '../components/about/WhyChooseUs'
-import bgImage from '../assets/g3.png'
+import bgImage from '../assets/land.png'
 
 const About = () => (
   

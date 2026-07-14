@@ -1,8 +1,8 @@
 export const BUSINESS_NAME = '500 Tree'
 export const BUSINESS_LOGO = './src/assets/logo.png'
-export const BUSINESS_PHONE = '(555) 500-TREE'
-export const BUSINESS_EMAIL = 'hello@500tree.com'
-export const BUSINESS_ADDRESS = '123 Arbor Way, Suite 500, Portland, OR 97201'
+export const BUSINESS_PHONE = '+1 716-500-8733'
+export const BUSINESS_EMAIL = 'argamrastogi8@kdmarketing.org'
+export const BUSINESS_ADDRESS = '9950 County Rd,Clarence Center, Ney York, 14032'
 export const SERVICE_RADIUS_MILES = 50
 
 export const NAV_LINKS = [

@@ -4,9 +4,9 @@ import GalleryCarousel from '../components/gallery/GalleryCarousel'
 const Gallery = () => (
   <section className="relative pt-40 pb-20 overflow-hidden">
     <img
-      src="./src/assets/hero1.jpg"
+      src="./src/assets/g2.png"
       alt=""
-      className=" blur-xl
+      className=" blur-md
        absolute inset-0 w-full h-full object-cover"
     />
     <div className="absolute inset-0 bg-forest/85" />
