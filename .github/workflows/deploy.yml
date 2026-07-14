@@ -1,11 +1,10 @@
-mkdir -p .github/workflows
-cat > .github/workflows/deploy.yml << 'EOF'
- name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
-     workflow_dispatch:
+  workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
@@ -37,4 +36,3 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-EOF
