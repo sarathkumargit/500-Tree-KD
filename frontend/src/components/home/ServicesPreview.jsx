@@ -4,13 +4,13 @@ import Container from '../common/Container'
 import SectionHeading from '../common/SectionHeading'
 import Card from '../common/Card'
 import { services } from '../../data/services'
-import hero1 from '../../assets/hero1.jpg'
+
 
 const previewIcons = { trimming: Scissors, pruning: Leaf, 'stump-removal': CircleDot }
 
 const ServicesPreview = () => (
-  <section className="relative overflow-hidden bg-emerald-100">
-    <img src={hero1} alt="" className="absolute inset-0 w-full h-full object-cover blur-md scale-110" />
+  <section className="relative overflow-hidde">
+    
     <div className="absolute inset-0 bg-forest/50" />
     <Container className="relative z-10 py-20">
     <SectionHeading
