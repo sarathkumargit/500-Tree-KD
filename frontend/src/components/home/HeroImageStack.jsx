@@ -18,6 +18,15 @@ const images = [
 // behind it in depth using perspective + rotateY, auto-advancing on a timer.
 const HeroImageStack = () => {
   const [active, setActive] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const mql = window.matchMedia('(max-width: 640px)')
+    setIsMobile(mql.matches)
+    const onChange = (e) => setIsMobile(e.matches)
+    mql.addEventListener('change', onChange)
+    return () => mql.removeEventListener('change', onChange)
+  }, [])
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -26,8 +35,19 @@ const HeroImageStack = () => {
     return () => clearInterval(id)
   }, [])
 
+  // Reduce the 3D intensity on small screens so fanned images don't clip
+  // outside a narrow viewport.
+  const translateStep = isMobile ? 4 : 8
+  const depthStep = isMobile ? 100 : 180
+  const rotateStep = isMobile ? -10 : -18
+  const scaleStep = isMobile ? 0.08 : 0.12
+
   return (
-    <div className=" absolute inset-0" style={{ perspective: '1400px' }}>
+    <div
+      className="absolute inset-0"
+      style={{ perspective: isMobile ? '900px' : '1400px' }}
+      aria-hidden="true"
+    >
       {images.map((src, i) => {
         let offset = i - active
         if (offset > images.length / 2) offset -= images.length
@@ -38,10 +58,15 @@ const HeroImageStack = () => {
             key={src}
             src={src}
             alt=""
+            role="presentation"
             onClick={() => setActive(i)}
-            className="absolute inset-0 w-full h-full object-cover  cursor-pointer transition-all duration-700 ease-out"
+            loading={i === 0 ? 'eager' : 'lazy'}
+            fetchpriority={i === 0 ? 'high' : 'auto'}
+            decoding="async"
+            tabIndex={-1}
+            className="absolute inset-0 w-full h-full object-cover cursor-pointer transition-all duration-700 ease-out"
             style={{
-              transform: `translateX(${offset * 8}%) translateZ(${-Math.abs(offset) * 180}px) rotateY(${offset * -18}deg) scale(${1 - Math.abs(offset) * 0.12})`,
+              transform: `translateX(${offset * translateStep}%) translateZ(${-Math.abs(offset) * depthStep}px) rotateY(${offset * rotateStep}deg) scale(${1 - Math.abs(offset) * scaleStep})`,
               opacity: Math.abs(offset) > 1 ? 0 : 1 - Math.abs(offset) * 0.35,
               zIndex: images.length - Math.abs(offset),
             }}
@@ -49,13 +74,14 @@ const HeroImageStack = () => {
         )
       })}
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5 sm:gap-2 z-20">
         {images.map((_, i) => (
           <button
             key={i}
             onClick={() => setActive(i)}
             aria-label={`Show hero image ${i + 1}`}
-            className={`w-2 h-2 rounded-full transition-colors ${i === active ? 'bg-gold' : 'bg-white/50'}`}
+            aria-hidden="false"
+            className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-colors ${i === active ? 'bg-gold' : 'bg-white/50'}`}
           />
         ))}
       </div>
