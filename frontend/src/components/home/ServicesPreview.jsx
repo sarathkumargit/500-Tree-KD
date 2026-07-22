@@ -16,7 +16,7 @@ const ServicesPreview = () => (
     <SectionHeading
       eyebrow="What We Do"
       title="Professional Tree Care Services"
-      description="From routine maintenance to emergency removal, our certified arborists handle it all."
+      description=""
     />
     <div className="grid md:grid-cols-3 gap-10">
       {services.slice(1, 4).map((service) => {

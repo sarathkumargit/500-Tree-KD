@@ -1,5 +1,4 @@
 import Container from '../components/common/Container'
-import SectionHeading from '../components/common/SectionHeading'
 import { BUSINESS_PHONE, BUSINESS_EMAIL, BUSINESS_ADDRESS } from '../utils/constants'
 import termsBg from '../assets/g2.webp'
 
@@ -32,18 +31,14 @@ const Terms = () => (
       <img src={termsBg} alt="" className="absolute inset-0 w-full h-full object-cover scale-105" loading="eager" />
       <div className="absolute inset-0 bg-emerald-900/80" />
       <div className="relative z-10 h-full flex flex-col justify-center pt-16 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
-        <SectionHeading
-          as="h1"
-          eyebrow="Legal Center"
-          title="Terms of Service & Privacy"
-          description="Transparency and trust are at the root of everything we do."
-          light
-        />
+        <p className="font-medium text-sm tracking-widest uppercase mb-3 text-emerald-300">Legal Center</p>
+        <h1 className="text-3xl md:text-4xl font-semibold text-white mb-3">Terms of Service & Privacy</h1>
+        <p className="text-base text-emerald-100/80">Transparency and trust are at the root of everything we do.</p>
       </div>
     </section>
 
     {/* Content */}
-    <section className="bg-white py-16">
+    <section className="bg-emerald-100 py-16">
       <Container>
         <div className="bg-white rounded-2xl border border-emerald-100 shadow-sm p-8 space-y-8 max-w-4xl mx-auto">
           <Section title="1. Website Usage">

@@ -49,7 +49,7 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
          <Link to="/contact" className="hidden sm:block">
   <Button
-    className={`font-extrabold border-dashed border-emerald-400! border-2! hover:bg-emerald-800! ${
+    className={`font-extrabold border-dashed border-emerald-300! border-2! hover:bg-emerald-800! ${
       scrolled ? 'text-canopy!' : 'text-emerald-100!'
     }`}
   >

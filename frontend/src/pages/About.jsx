@@ -16,12 +16,15 @@ const About = () => (
       />
       <div className="absolute inset-0 bg-forest/70" />
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 pt-20">
-        <SectionHeading
-          eyebrow="About 500 Tree"
-          title="KD Trusted Tree Care, Rooted in Experience"
-          align="center"
-          light
-        />
+        <div className="max-w-3xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-emerald-100 mb-4">
+            About 500 Tree
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-emerald-100/90">
+            Trusted Tree Care, Rooted in Experience
+          </p>
+        </div>
+        
       </div>
     </section>
 
