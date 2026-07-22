@@ -1,21 +1,15 @@
 import { useState, useEffect } from 'react'
 
-import hero1 from '../../assets/hero1.webp'
+import img8  from '../../assets/img8.webp'
 import hero3 from '../../assets/hero3.webp'
 import hero4 from '../../assets/hero4.webp'
-import img8 from '../../assets/img8.webp'
-import g2 from '../../assets/g2.webp'
+import g2    from '../../assets/g2.webp'
 
-const images = [
-  hero1,
-  img8,
-  hero3,
-  hero4,
-  g2,
-]
+// hero1 lives in /public so the browser can preload it before JS runs (LCP fix)
+const HERO1_URL = '/hero1.webp'
 
-// Coverflow-style 3D image stack: front image centered, others fanned
-// behind it in depth using perspective + rotateY, auto-advancing on a timer.
+const images = [HERO1_URL, img8, hero3, hero4, g2]
+
 const HeroImageStack = () => {
   const [active, setActive] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
@@ -29,18 +23,14 @@ const HeroImageStack = () => {
   }, [])
 
   useEffect(() => {
-    const id = setInterval(() => {
-      setActive((prev) => (prev + 1) % images.length)
-    }, 4000)
+    const id = setInterval(() => setActive((prev) => (prev + 1) % images.length), 4000)
     return () => clearInterval(id)
   }, [])
 
-  // Reduce the 3D intensity on small screens so fanned images don't clip
-  // outside a narrow viewport.
-  const translateStep = isMobile ? 4 : 8
-  const depthStep = isMobile ? 100 : 180
-  const rotateStep = isMobile ? -10 : -18
-  const scaleStep = isMobile ? 0.08 : 0.12
+  const translateStep = isMobile ? 4  : 8
+  const depthStep    = isMobile ? 100 : 180
+  const rotateStep   = isMobile ? -10 : -18
+  const scaleStep    = isMobile ? 0.08 : 0.12
 
   return (
     <div
@@ -50,7 +40,7 @@ const HeroImageStack = () => {
     >
       {images.map((src, i) => {
         let offset = i - active
-        if (offset > images.length / 2) offset -= images.length
+        if (offset >  images.length / 2) offset -= images.length
         if (offset < -images.length / 2) offset += images.length
 
         return (
@@ -60,9 +50,12 @@ const HeroImageStack = () => {
             alt=""
             role="presentation"
             onClick={() => setActive(i)}
+            /* i===0 is the LCP image — eager + high priority */
             loading={i === 0 ? 'eager' : 'lazy'}
             fetchpriority={i === 0 ? 'high' : 'auto'}
-            decoding="async"
+            decoding={i === 0 ? 'sync' : 'async'}
+            width={1920}
+            height={1080}
             tabIndex={-1}
             className="absolute inset-0 w-full h-full object-cover cursor-pointer transition-all duration-700 ease-out"
             style={{
@@ -80,7 +73,6 @@ const HeroImageStack = () => {
             key={i}
             onClick={() => setActive(i)}
             aria-label={`Show hero image ${i + 1}`}
-            aria-hidden="false"
             className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-colors ${i === active ? 'bg-gold' : 'bg-white/50'}`}
           />
         ))}

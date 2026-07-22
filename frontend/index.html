@@ -3,16 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KD 500 Tree | Professional Tree Care Services</title>
+    <title>500 Tree | Professional Tree Care Services</title>
     <meta name="description" content="Expert tree removal, trimming, pruning and stump removal serving the greater metro area." />
 
-    <!-- Favicon — logo shown in browser tab/URL bar -->
-<link rel="icon" type="image/webp" href="/logo.webp" style="border-radius: 50%" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="/logo.webp" />
 
-    <!-- Preconnect to Google Fonts to avoid render-blocking DNS lookup -->
+    <!-- LCP preload: browser fetches hero image before JS runs — fixes 14s LCP -->
+    <link rel="preload" as="image" href="/hero1.webp" fetchpriority="high" />
+
+    <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Async font load — eliminates render-blocking (saves ~500ms) -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" />
+    </noscript>
   </head>
   <body>
     <div id="root"></div>

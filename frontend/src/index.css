@@ -2,11 +2,11 @@
 
 @theme {
   /* Brand colours */
-  --color-forest:  #0b3d2e;   /* deep forest green — backgrounds, dark surfaces */
-  --color-moss:    #2d6a4f;   /* mid-tone green — hover states, secondary buttons */
-  --color-canopy:  #e8f5e0;   /* pale green-white — text on dark, light surfaces */
-  /* --color-gold:    #c9a227;   golden amber — accent icons, CTA button */
-  --color-ink:     #1c1c1c;   /* near-black — body text */
+  --color-forest:  #0b3d2e;
+  --color-moss:    #2d6a4f;
+  --color-canopy:  #e8f5e0;
+  --color-gold:    #c9a227;
+  --color-ink:     #1c1c1c;
 
   /* Custom shadow */
   --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
@@ -15,7 +15,6 @@
   --font-display: 'Space Grotesk', sans-serif;
 }
 
-/* Liquid-glass signature: one shared recipe used by GlassPanel */
 .glass {
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(28px) saturate(180%);
@@ -23,11 +22,12 @@
   border: 5px solid rgba(255, 255, 255, 0.45);
 }
 
+/* Increased background opacity from 0.05 → 0.35 so card is visible on bright images */
 .glass-dark {
-  background: rgba(11, 61, 46, 0.05);
+  background: rgba(11, 61, 46, 0.35);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 @keyframes fadeIn {
