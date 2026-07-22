@@ -9,7 +9,7 @@ const reasons = [
 ]
 
 const WhyChooseUs = () => (
-  <div className="rounded-3xl">
+  <div  dark className="rounded-3xl">
     <GlassPanel  className="p-8">
       <h3 className="text-xl text-center font-semibold mb-5 text-dark">Why Choose 500 Tree</h3>
       <ul className="space-y-3">
