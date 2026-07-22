@@ -25,7 +25,7 @@ const HeroSection = () => (
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-emerald-400">
           <a href={`tel:${BUSINESS_PHONE.replace(/[^0-9+]/g, '')}`} aria-label={`Call ${BUSINESS_NAME} at ${BUSINESS_PHONE}`}>
             <Button
-              variant="gold"
+              variant="canopy"
               className="text-base sm:text-lg md:text-xl font-bold border-dashed border-emerald-400 border-2 rounded-full whitespace-nowrap"
             >
               {BUSINESS_PHONE} <ArrowRight size={20} className="inline ml-1" />

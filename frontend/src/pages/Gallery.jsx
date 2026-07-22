@@ -1,4 +1,4 @@
-import g2 from '../assets/g2.png'
+import g2 from '../assets/g2.webp'
 import SectionHeading from '../components/common/SectionHeading'
 import GalleryCarousel from '../components/gallery/GalleryCarousel'
 import { BUSINESS_NAME } from '../utils/constants'
@@ -16,7 +16,6 @@ const Gallery = () => (
       decoding="async"
       className="blur-md absolute inset-0 w-full h-full object-cover"
     />
-    <div className="absolute inset-0 bg-forest/85" />
 
     <div className="relative z-10 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
       <SectionHeading

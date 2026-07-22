@@ -11,7 +11,7 @@ const previewIcons = { trimming: Scissors, pruning: Leaf, 'stump-removal': Circl
 const ServicesPreview = () => (
   <section className="relative overflow-hidde">
     
-    <div className="absolute inset-0 bg-forest/50" />
+    <div className="absolute inset-0 bg-emerald-100" />
     <Container className="relative z-10 py-20">
     <SectionHeading
       eyebrow="What We Do"

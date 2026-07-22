@@ -1,8 +1,8 @@
-import hero2 from '../assets/hero2.jpg'
-import hero7 from '../assets/hero7.jpg'
-import img8 from '../assets/img8.jpg'
-import img4 from '../assets/img4.jpg'
-import hero6 from '../assets/hero6.jpg'
+import hero2 from '../assets/hero2.webp'
+import hero7 from '../assets/hero7.webp'
+import img8 from '../assets/img8.webp'
+import img4 from '../assets/img4.webp'
+import hero6 from '../assets/hero6.webp'
 
 export const services = [
   {
@@ -36,7 +36,7 @@ export const services = [
   {
     id: 'emergency',
     title: 'Emergency Tree Services',
-    description: 'Rapid response for storm damage and fallen trees, available around the clock.',
+    description: 'We are ready to respond immediately — 24 hours a day, 7 days a week, because emergencies don\'t wait for business hours',
     highlights: ['24/7 Response', 'Storm Damage'],
     image: hero6,
   },

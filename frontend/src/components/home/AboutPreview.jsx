@@ -5,7 +5,7 @@ import CompanyOverview from '../about/CompanyOverview'
 import WhyChooseUs from '../about/WhyChooseUs'
 
 const AboutPreview = () => (
-  <section className="bg-emerald-100 ">
+  <section className="bg-emerald-50 ">
     <Container className="py-20">
       <SectionHeading eyebrow="About Us" title="Trusted Tree Care, Rooted in Experience" />
       <div className="grid md:grid-cols-2 gap-6">

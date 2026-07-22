@@ -4,7 +4,7 @@ import SectionHeading from '../components/common/SectionHeading'
 import LocationMap from '../components/locations/LocationMap'
 import ServiceList from '../components/services/ServiceList'
 import { SERVICE_RADIUS_MILES } from '../utils/constants'
-import bgImage from '../assets/g2.png'
+import bgImage from '../assets/g2.webp'
 
 const Locations = () => (
    <section className="relative overflow-hidden">

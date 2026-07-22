@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 
-import hero1 from '../../assets/hero1.jpg'
-import hero3 from '../../assets/hero3.jpg'
-import hero4 from '../../assets/hero4.jpg'
-import img8 from '../../assets/img8.jpg'
-import g2 from '../../assets/g2.png'
+import hero1 from '../../assets/hero1.webp'
+import hero3 from '../../assets/hero3.webp'
+import hero4 from '../../assets/hero4.webp'
+import img8 from '../../assets/img8.webp'
+import g2 from '../../assets/g2.webp'
 
 const images = [
   hero1,

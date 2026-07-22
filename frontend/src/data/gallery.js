@@ -1,11 +1,11 @@
-import img1 from '../assets/img1.jpg'
-import img4 from '../assets/img4.jpg'
-import hero1 from '../assets/hero1.jpg'
-import g1 from '../assets/g1.jpg'
-import g2 from '../assets/g2.png'
-import g3 from '../assets/g3.png'
-import land from '../assets/land.png'
-import img8 from '../assets/img8.jpg'
+import img1 from '../assets/img1.webp'
+import img4 from '../assets/img4.webp'
+import hero1 from '../assets/hero1.webp'
+import g1 from '../assets/g1.webp'
+import g2 from '../assets/g2.webp'
+import g3 from '../assets/g3.webp'
+import land from '../assets/land.webp'
+import img8 from '../assets/img8.webp'
 
 export const galleryItems = [
   { id: 3, title: '', src: img4 },

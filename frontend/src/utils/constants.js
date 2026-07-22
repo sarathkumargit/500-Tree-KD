@@ -1,4 +1,4 @@
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.webp'
 
 export const BUSINESS_NAME = '500 Tree'
 export const BUSINESS_LOGO = logo

@@ -2,7 +2,7 @@ import Container from '../components/common/Container'
 import SectionHeading from '../components/common/SectionHeading'
 import GlassPanel from '../components/common/GlassPanel'
 import { BUSINESS_PHONE, BUSINESS_EMAIL, BUSINESS_ADDRESS } from '../utils/constants'
-import termsBg from '../assets/g2.png'
+import termsBg from '../assets/g2.webp'
 
 const serviceItems = [
   'Tree removal',

@@ -43,7 +43,7 @@ const Footer = () => (
           <ul className="space-y-3 text-sm">
             {column.links.map((link) => (
               <li key={link.label}>
-                <Link to={link.href} className="font-medium hover:text-gold transition-colors">
+                <Link to={link.href} className="font-medium hover:text-white transition-colors">
                   {link.label}
                 </Link>
               </li>
@@ -56,10 +56,10 @@ const Footer = () => (
         <p className="text-xs font-medium tracking-wide uppercase text-canopy/50 mb-4">Support</p>
         <ul className="space-y-3 text-sm">
           <li>
-            <Link to="/contact" className="font-medium hover:text-gold transition-colors">Contact Support</Link>
+            <Link to="/contact" className="font-medium hover:text-white transition-colors">Contact Support</Link>
           </li>
           <li>
-            <Link to="/terms" className="font-medium hover:text-gold transition-colors">SMS Policy</Link>
+            <Link to="/terms" className="font-medium hover:text-white transition-colors">SMS Policy</Link>
           </li>
         </ul>
         <a href={`tel:${BUSINESS_PHONE.replace(/[^\d+]/g, '')}`} className="flex items-center gap-2 mt-4 font-semibold text-lg hover:text-gold transition-colors">
