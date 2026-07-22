@@ -1,16 +1,14 @@
 import { twMerge } from 'tailwind-merge'
-import GlassPanel from './GlassPanel'
 
 const Card = ({ image, icon, title, description, children, className = '' }) => (
-
-  <GlassPanel
-     dark className={twMerge('overflow-hidden border border-white/30 hover:-translate-y-1 transition-transform duration-300', className)}
-  >
-      <section className=" bg-emerald-200">
+  <div className={twMerge(
+    'bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/60 hover:-translate-y-1 transition-transform duration-300',
+    className
+  )}>
     {image && <img src={image} alt={title} className="w-full h-40 object-cover" />}
     <div className="p-6 flex flex-col items-center text-center">
       {icon && (
-        <div className="bg-white/20 w-10 h-10 flex items-center justify-center rounded-xl text-forest mb-4">
+        <div className="bg-emerald-100 w-10 h-10 flex items-center justify-center rounded-xl text-forest mb-4">
           {icon}
         </div>
       )}
@@ -18,11 +16,7 @@ const Card = ({ image, icon, title, description, children, className = '' }) => 
       {description && <p className="text-ink/80 text-sm leading-relaxed">{description}</p>}
       {children}
     </div>
-     </section>
-    
-  </GlassPanel>
- 
+  </div>
 )
-
 
 export default Card

@@ -64,7 +64,7 @@ const GalleryCarousel = () => {
             key={i}
             onClick={() => goTo(i)}
             aria-label={`Go to slide ${i + 1}`}
-            className={`w-2 h-2 rounded-full transition-colors ${i === active ? 'bg-gold' : 'bg-white/40'}`}
+            className={`w-2 h-2 rounded-full transition-colors ${i === active ? 'bg-emerald-400' : 'bg-white/40'}`}
           />
         ))}
       </div>

@@ -4,32 +4,35 @@ import GalleryCarousel from '../components/gallery/GalleryCarousel'
 import { BUSINESS_NAME } from '../utils/constants'
 
 const Gallery = () => (
-  <section
-    className="relative pt-28 sm:pt-32 md:pt-40 pb-12 sm:pb-16 md:pb-20 overflow-hidden"
-    aria-labelledby="gallery-heading"
-  >
-    <img
-      src={g2}
-      alt=""
-      role="presentation"
-      loading="lazy"
-      decoding="async"
-      className="blur-md absolute inset-0 w-full h-full object-cover"
-    />
-
-    <div className="relative z-10 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
-      <SectionHeading
-        id="gallery-heading"
-        eyebrow="Our Work"
-        title={`${BUSINESS_NAME} Project Gallery`}
-        description={`Browse completed tree removal, trimming, and landscaping projects by ${BUSINESS_NAME}. See real results from our recent jobs in your area.`}
+  <div>
+    {/* Hero header — dark overlay so heading text is readable */}
+    <section className="relative h-56 sm:h-64 overflow-hidden">
+      <img
+        src={g2}
+        alt=""
+        role="presentation"
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover scale-105"
       />
+      <div className="absolute inset-0 bg-forest/75" />
+      <div className="relative z-10 h-full flex flex-col justify-center pt-16 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
+        <SectionHeading
+          eyebrow="Our Work"
+          title={`${BUSINESS_NAME} Project Gallery`}
+          description={`Browse completed tree removal, trimming, and landscaping projects. Real results from our recent jobs.`}
+          light
+        />
+      </div>
+    </section>
 
-      <div className="py-6 sm:py-8 md:py-0">
+    {/* Carousel on clean dark-green background */}
+    <section className="bg-forest py-12 sm:py-16">
+      <div className="px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
         <GalleryCarousel />
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 )
 
 export default Gallery

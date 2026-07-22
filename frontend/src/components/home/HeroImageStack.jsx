@@ -73,7 +73,7 @@ const HeroImageStack = () => {
             key={i}
             onClick={() => setActive(i)}
             aria-label={`Show hero image ${i + 1}`}
-            className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-colors ${i === active ? 'bg-gold' : 'bg-white/50'}`}
+            className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-colors ${i === active ? 'bg-emerald-400' : 'bg-white/50'}`}
           />
         ))}
       </div>

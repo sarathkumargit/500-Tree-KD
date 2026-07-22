@@ -6,10 +6,10 @@ import HeroImageStack from './HeroImageStack'
 import { BUSINESS_NAME, BUSINESS_PHONE } from '../../utils/constants'
 
 const HeroSection = () => (
-  <section className="relative h-[520px] sm:h-[580px] md:h-[640px] overflow-hidden">
-    <div className="bg-linear-to-br from-forest to-moss absolute inset-0">
+  <section className="relative h-[520px] sm:h-[580px] md:h-[640px] overflow-hidden" aria-label="Hero">
+    <div className="bg-emerald-900 absolute inset-0">
       <HeroImageStack />
-      <div className="absolute inset-0 bg-linear-to-t from-forest/70 via-forest/10 to-transparent pointer-events-none z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/70 via-emerald-900/10 to-transparent pointer-events-none z-10" />
 
       <GlassPanel
         dark
@@ -18,24 +18,18 @@ const HeroSection = () => (
         <h1 className="text-emerald-300 text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight mb-2 text-center">
           {BUSINESS_NAME} Services
         </h1>
-        <p className="text-emerald-100 text-sm sm:text-base md:text-lg leading-relaxed mb-4 text-center">
+        <p className="text-emerald-100 text-sm sm:text-base md:text-lg leading-relaxed mb-6 text-center">
           Preserving the beauty and safety of your landscape with professional arboriculture
           services backed by decades of experience.
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-emerald-400">
-          <a href={`tel:${BUSINESS_PHONE.replace(/[^0-9+]/g, '')}`} aria-label={`Call ${BUSINESS_NAME} at ${BUSINESS_PHONE}`}>
-            <Button
-              variant="canopy"
-              className="text-base sm:text-lg md:text-xl font-bold border-dashed border-emerald-400 border-2 rounded-full whitespace-nowrap"
-            >
-              {BUSINESS_PHONE} <ArrowRight size={20} className="inline ml-1" />
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+          <a href={`tel:${BUSINESS_PHONE.replace(/[^0-9+]/g, '')}`} aria-label={`Call ${BUSINESS_NAME}`}>
+            <Button variant="accent" className="text-base font-bold border-2 border-emerald-300 border-dashed rounded-full whitespace-nowrap">
+              {BUSINESS_PHONE} <ArrowRight size={18} className="inline ml-1" />
             </Button>
           </a>
-          <Link to="/services" aria-label={`View ${BUSINESS_NAME} tree services`}>
-            <Button
-              variant="ghost"
-              className="text-canopy! bg-white/10! hover:bg-white/20! text-base sm:text-lg md:text-xl font-bold border-dashed border-emerald-400 border-2 rounded-full"
-            >
+          <Link to="/services">
+            <Button variant="ghost" className="text-base font-bold border-2 border-white/40 border-dashed rounded-full">
               Our Services
             </Button>
           </Link>

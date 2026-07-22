@@ -19,7 +19,7 @@ const MobileMenu = ({ open, onClose }) => {
               key={link.href}
               to={link.href}
               onClick={onClose}
-              className="text-lg font-medium text-canopy hover:text-gold transition-colors"
+              className="text-lg font-medium text-canopy hover:text-emerald-300 transition-colors"
             >
               {link.label}
             </NavLink>
