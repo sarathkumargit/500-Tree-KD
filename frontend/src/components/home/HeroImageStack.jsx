@@ -52,7 +52,7 @@ const HeroImageStack = () => {
             onClick={() => setActive(i)}
             /* i===0 is the LCP image — eager + high priority */
             loading={i === 0 ? 'eager' : 'lazy'}
-            fetchpriority={i === 0 ? 'high' : 'auto'}
+            fetchPriority={i === 0 ? 'high' : 'auto'}
             decoding={i === 0 ? 'sync' : 'async'}
             width={1920}
             height={1080}

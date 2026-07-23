@@ -5,35 +5,47 @@ import { SERVICE_RADIUS_MILES } from '../utils/constants'
 import bgImage from '../assets/g2.webp'
 
 const Services = () => (
-  <div>
-    {/* Hero header */}
-    <section className="relative h-56 sm:h-64 overflow-hidden">
+  <div className="relative min-w-0 overflow-x-hidden">
+    {/* Full page blurred background */}
+    <div className="fixed inset-0 -z-10" aria-hidden="true">
       <img
         src={bgImage}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover scale-105"
+        className="w-full h-full object-cover blur-sm scale-105"
         loading="eager"
+        decoding="async"
+        fetchPriority="high"
       />
-      <div className="absolute inset-0 bg-emerald-900/80" />
-      <div className="relative z-10 h-full flex flex-col justify-center pt-16 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
-        <p className="font-medium text-sm tracking-widest uppercase mb-3 text-emerald-300">KD 500 Tree</p>
-        <h1 className="text-3xl md:text-4xl font-semibold text-white mb-3">Services & Locations</h1>
-        <p className="text-base text-emerald-100/80">Coverage: {SERVICE_RADIUS_MILES} mile radius across the metro area.</p>
+      <div className="absolute inset-0 bg-emerald-950/65" />
+    </div>
+
+    {/* Hero text */}
+    <section className="mt-10 min-h-[13rem] sm:min-h-[17rem] flex items-center justify-center px-4 sm:px-6 pt-20 pb-6">
+      <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-6 sm:px-10 py-6 text-center w-full max-w-2xl">
+        <p className="font-medium text-xs tracking-widest uppercase mb-2 text-emerald-300">KD 500 Tree</p>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-2 leading-tight">
+          Services & Locations
+        </h1>
+        <p className="text-sm sm:text-base text-emerald-100/80">
+          Coverage: {SERVICE_RADIUS_MILES} mile radius across the metro area.
+        </p>
       </div>
     </section>
 
-    {/* Services grid */}
-    <section className="bg-emerald-100 py-16">
+    {/* Services carousel */}
+    <section className="py-8 sm:py-12 px-4 sm:px-0">
       <Container>
         <ServiceList />
       </Container>
     </section>
 
     {/* Map */}
-    <section className="bg-white py-12">
+    <section className="py-8 sm:py-12 px-4 sm:px-0">
       <Container>
-        <h2 className="text-xl font-semibold text-emerald-900 mb-6">Service Area</h2>
-        <div className="rounded-2xl overflow-hidden shadow-md">
+        <h2 className="text-center text-2xl sm:text-3xl font-semibold text-white mb-6">
+          Service Area
+        </h2>
+        <div className="rounded-2xl overflow-hidden shadow-md w-full">
           <LocationMap />
         </div>
       </Container>

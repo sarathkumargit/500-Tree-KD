@@ -5,7 +5,7 @@ import { BUSINESS_NAME, BUSINESS_PHONE, BUSINESS_EMAIL, BUSINESS_ADDRESS } from 
 
 const ContactInfo = () => (
   <section
-    className="bg-emerald-800/60 backdrop-blur-sm border border-emerald-700/50 rounded-2xl p-6 sm:p-8 flex flex-col gap-6 text-left"
+    className="bg-emerald-900 backdrop-blur-sm border border-emerald-700/50 rounded-2xl p-6 sm:p-8 flex flex-col gap-6 text-left"
     aria-labelledby="contact-info-heading"
     itemScope
     itemType="https://schema.org/LocalBusiness"
@@ -40,7 +40,7 @@ const ContactInfo = () => (
     <LocationMap />
 
     <div>
-      <p className="text-xs uppercase tracking-widest text-emerald-400 mb-3">Follow Our Work</p>
+      <p className="text-xs uppercase tracking-widest text-emerald-100 mb-3">Follow Our Work</p>
       <SocialLinks />
     </div>
   </section>
