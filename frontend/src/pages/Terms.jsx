@@ -32,8 +32,8 @@ const Terms = () => (
       <div className="absolute inset-0 bg-emerald-900/80" />
       <div className="relative z-10 h-full flex flex-col justify-center pt-16 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
         <p className="font-medium text-sm tracking-widest uppercase mb-3 text-emerald-300">Legal Center</p>
-        <h1 className="text-3xl md:text-4xl font-semibold text-white mb-3">Terms of Service & Privacy</h1>
-        <p className="text-base text-emerald-100/80">Transparency and trust are at the root of everything we do.</p>
+        <h1 className="text-3xl md:text-4xl font-semibold text-white mb-3">Terms & Conditions</h1>
+        <p className="text-base text-emerald-100/80">Effective Date: January 19, 2025 | Last Updated: July 14, 2026</p>
       </div>
     </section>
 
@@ -41,103 +41,122 @@ const Terms = () => (
     <section className="bg-emerald-100 py-16">
       <Container>
         <div className="bg-white rounded-2xl border border-emerald-100 shadow-sm p-8 space-y-8 max-w-4xl mx-auto">
-          <Section title="1. Website Usage">
-            <Body>By accessing the KD 500 Tree website, you agree to comply with the following terms. This site is provided for informational purposes and for requesting tree care services. Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offense.</Body>
-          </Section>
 
-          <Section title="2. Customer Responsibilities">
-            <ul className="text-sm text-gray-600 leading-relaxed list-disc pl-5 space-y-1">
-              <li>Customers must provide accurate property boundaries and identify any underground utilities not marked by public services.</li>
-              <li>Safe access to the work site must be provided for heavy machinery and personnel.</li>
-            </ul>
-          </Section>
+          <Body>Welcome to KD 500 Tree. By accessing this website, submitting a request for an estimate, or using our tree care services, you agree to these Terms and Conditions. If you do not agree with any part of these terms, please do not use our website or services.</Body>
 
-          <Section title="3. Age Requirement">
+          <Section title="Age Requirement">
             <Body>By using this website, submitting a contact form, or enrolling in our SMS messaging program, you confirm that you are at least 18 years of age.</Body>
           </Section>
 
-          <Section title="4. Terminology">
+          <Section title="Terminology">
             <Body>"Client," "You," and "Your" refer to the individual using this website or requesting our services.</Body>
             <Body>"KD 500 Tree," "The Company," "We," "Our," and "Us" refer to KD 500 Tree.</Body>
           </Section>
 
-          <Section title="5. Services">
+          <Section title="Services">
             <Body>KD 500 Tree provides professional tree care services, which may include:</Body>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2">
               {serviceItems.map((item) => (
                 <li key={item} className="rounded-xl bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-900">{item}</li>
               ))}
             </ul>
+            <Body>Service availability may depend on location, weather conditions, property access, equipment requirements, and the condition of the trees involved.</Body>
           </Section>
 
-          <Section title="6. Estimates and Pricing">
-            <Body>We may provide free estimates based on the information available at the time of inspection. Final pricing may change if additional hazards, hidden damage, or unexpected conditions are discovered. Any changes will be discussed before additional work is completed.</Body>
+          <Section title="Estimates and Pricing">
+            <Body>We may provide free estimates based on the information available at the time of inspection.</Body>
+            <Body>Final pricing may change if additional hazards, hidden damage, access restrictions, utility concerns, or other unexpected conditions are discovered during the project.</Body>
+            <Body>Any changes to the original estimate will be discussed with the client before additional work is completed.</Body>
           </Section>
 
-          <Section title="7. Property Access">
-            <Body>By scheduling a service, you confirm that you have permission to authorize tree work at the property. The client is responsible for identifying property boundaries, underground utilities, irrigation systems, and other concealed structures.</Body>
+          <Section title="Property Access">
+            <Body>By scheduling a service, you confirm that you have permission to authorize tree work at the property.</Body>
+            <Body>The client is responsible for identifying property boundaries, underground utilities, irrigation systems, septic systems, invisible fences, and other concealed structures that may affect the work.</Body>
           </Section>
 
-          <Section title="8. Safety and Weather Conditions">
-            <Body>Tree care work may be delayed or cancelled due to severe weather, unsafe conditions, or circumstances beyond our control. KD 500 Tree reserves the right to stop work that may place employees, customers, or the public at risk.</Body>
+          <Section title="Safety and Weather Conditions">
+            <Body>Tree care work may be delayed, rescheduled, or cancelled because of severe weather, unsafe working conditions, equipment issues, utility hazards, or other circumstances beyond our control.</Body>
+            <Body>KD 500 Tree reserves the right to stop or postpone work that may place employees, customers, surrounding property, or the public at risk.</Body>
           </Section>
 
-          <Section title="9. Emergency Tree Services">
-            <Body>Emergency response times may vary. Submitting a request does not guarantee immediate arrival. If a fallen tree is touching a power line, stay away and contact the appropriate utility provider.</Body>
+          <Section title="Emergency Tree Services">
+            <Body>Emergency response times may vary depending on weather conditions, road access, service demand, crew availability, and the severity of the emergency.</Body>
+            <Body>Submitting an emergency service request does not guarantee immediate arrival.</Body>
+            <Body>If a fallen tree or branch is touching a power line, stay away from the area and contact the appropriate utility provider or emergency service.</Body>
           </Section>
 
-          <Section title="10. Cookies">
-            <Body>We may use cookies to improve website performance and user experience.</Body>
+          <Section title="Cookies">
+            <Body>We may use cookies and similar technologies to improve website performance, understand website usage, and provide a better user experience.</Body>
+            <Body>Additional information about how we collect and use information is available in our Privacy Policy.</Body>
           </Section>
 
-          <Section title="11. Intellectual Property License">
-            <Body>Unless otherwise stated, KD 500 Tree owns or has permission to use all content on this website. You may not copy, reproduce, or reuse content without prior written permission.</Body>
+          <Section title="Intellectual Property License">
+            <Body>Unless otherwise stated, KD 500 Tree owns or has permission to use the text, graphics, logos, photographs, website design, and other content displayed on this website.</Body>
+            <Body>You may not copy, reproduce, publish, sell, distribute, modify, or reuse website content without prior written permission.</Body>
           </Section>
 
-          <Section title="12. SMS Messaging Terms of Service">
+          <Section title="SMS Messaging Terms of Service">
             <div className="text-sm text-gray-600 leading-relaxed space-y-4">
-              {[
-                ['Program Description', `By providing your mobile number and consenting, you agree to receive recurring text messages from KD 500 Tree. Consent is not required as a condition of purchasing services.`],
-                ['Opt-Out', `Reply "STOP" to any message to opt out. You may receive one final confirmation message.`],
-                ['Support', `Reply "HELP" or contact ${BUSINESS_EMAIL}.`],
-                ['Message & Data Rates', 'Standard message and data rates may apply.'],
-                ['Carrier Liability', 'KD 500 Tree is not liable for delayed or undelivered messages.'],
-                ['Age Restriction', 'You must be 18 or older to participate in our SMS program.'],
-              ].map(([label, text]) => (
-                <div key={label}>
-                  <p className="font-semibold text-emerald-800 mb-1">{label}</p>
-                  <p>{text}</p>
-                </div>
-              ))}
+              <div>
+                <p className="font-semibold text-emerald-800 mb-1">Program Description</p>
+                <p>By providing your mobile phone number and consenting to receive messages, you agree to receive recurring automated or manually sent text messages from KD 500 Tree. Consent is not required as a condition of purchasing services.</p>
+              </div>
               <div>
                 <p className="font-semibold text-emerald-800 mb-2">Messages may include:</p>
                 <ul className="list-disc pl-5 space-y-1">
                   {messageItems.map((item) => <li key={item}>{item}</li>)}
                 </ul>
               </div>
-            </div>
-          </Section>
-
-          <Section title="13–20. Additional Terms">
-            <Body>These terms cover user-submitted information, external links, content liability, intellectual property, limitation of liability, disclaimers, changes to terms, and governing law. KD 500 Tree reserves all rights under applicable U.S. law.</Body>
-          </Section>
-
-          <Section title="21. Privacy & SMS Data">
-            <div className="text-sm text-gray-600 leading-relaxed space-y-3">
               {[
-                ['Collection', 'We collect your mobile number when you opt in to SMS communications.'],
-                ['Use', 'We use it to send service updates, reminders, and offers related to tree care.'],
-                ['Data Sharing', 'We do not sell, share, or rent your phone number or SMS consent data to third parties.'],
-                ['Your Rights', `Contact ${BUSINESS_EMAIL} to access or delete your data.`],
+                ['Opt-Out', 'Reply STOP to any message. After opting out, you may receive one final confirmation message.'],
+                ['Support', `Reply HELP to any SMS message or contact us at ${BUSINESS_EMAIL}.`],
+                ['Message Frequency', 'Message frequency may vary depending on your service request, appointment status, and communication preferences.'],
+                ['Message & Data Rates', 'Standard message and data rates may apply depending on your wireless carrier and mobile service plan.'],
+                ['Carrier Liability', 'Mobile carriers are not responsible for delayed or undelivered messages. KD 500 Tree cannot guarantee delivery because it depends on carrier availability, network coverage, and device compatibility.'],
               ].map(([label, text]) => (
                 <div key={label}>
-                  <span className="font-semibold text-emerald-800">{label}: </span>{text}
+                  <p className="font-semibold text-emerald-800 mb-1">{label}</p>
+                  <p>{text}</p>
                 </div>
               ))}
             </div>
           </Section>
 
-          <Section title="22. Contact Information">
+          <Section title="User-Submitted Information">
+            <Body>When submitting a contact form, estimate request, review, photograph, or other information, you agree that the information provided is accurate and does not violate applicable laws or another person's rights.</Body>
+            <Body>KD 500 Tree may remove content that is offensive, misleading, unlawful, inappropriate, or in violation of these Terms and Conditions.</Body>
+          </Section>
+
+          <Section title="Links to External Websites">
+            <Body>Our website may contain links to third-party websites or services. KD 500 Tree does not control and is not responsible for their content, privacy practices, availability, or security.</Body>
+          </Section>
+
+          <Section title="Hyperlinking to Our Content">
+            <Body>Organizations may link to our website provided that the link is not misleading, does not falsely imply sponsorship or endorsement, does not damage our reputation, and is relevant to the linking website.</Body>
+          </Section>
+
+          <Section title="Content Liability">
+            <Body>We are not responsible for content appearing on external websites that link to our website. You agree to protect and defend KD 500 Tree against claims resulting from unlawful or misleading content published on a website under your control.</Body>
+          </Section>
+
+          <Section title="Limitation of Liability">
+            <Body>To the fullest extent permitted by law, KD 500 Tree is not liable for indirect, incidental, special, or consequential damages arising from use of this website, delays, third-party services, weather conditions, or information submitted through online forms.</Body>
+          </Section>
+
+          <Section title="Disclaimer">
+            <Body>Website information is provided for general informational purposes and is not a substitute for an on-site professional inspection.</Body>
+            <Body>KD 500 Tree does not guarantee that all website information will always be complete, accurate, or up to date.</Body>
+          </Section>
+
+          <Section title="Changes to These Terms">
+            <Body>KD 500 Tree may update these Terms and Conditions when necessary. Changes will be published on this page with an updated "Last Updated" date.</Body>
+          </Section>
+
+          <Section title="Governing Law">
+            <Body>These Terms and Conditions are governed by the applicable laws of the State of New York and the United States.</Body>
+          </Section>
+
+          <Section title="Contact Information">
             <div className="rounded-2xl bg-emerald-50 border border-emerald-100 p-6 text-sm text-gray-700 space-y-2">
               <p><strong className="text-emerald-900">Company:</strong> KD 500 Tree</p>
               <p><strong className="text-emerald-900">Phone:</strong> {BUSINESS_PHONE}</p>
@@ -145,6 +164,7 @@ const Terms = () => (
               <p><strong className="text-emerald-900">Address:</strong> {BUSINESS_ADDRESS}</p>
             </div>
           </Section>
+
         </div>
       </Container>
     </section>
