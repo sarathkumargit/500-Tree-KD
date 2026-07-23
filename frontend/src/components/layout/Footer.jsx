@@ -59,7 +59,7 @@ const Footer = () => (
           <li>
             <Link to="/contact" className="text-emerald-200/80 hover:text-white transition-colors">Contact Support</Link>
           </li>
-          
+           
         </ul>
         <a
           href={`tel:${BUSINESS_PHONE.replace(/[^\d+]/g, '')}`}
