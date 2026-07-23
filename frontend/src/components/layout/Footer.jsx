@@ -17,7 +17,6 @@ const footerColumns = [
     heading: 'Company',
     links: [
       { label: 'About Us',       href: '/about' },
-      { label: 'Safety Record',  href: '/about' },
       { label: 'Privacy Policy', href: '/terms' },
       { label: 'Terms of Service', href: '/terms' },
     ],
@@ -60,9 +59,7 @@ const Footer = () => (
           <li>
             <Link to="/contact" className="text-emerald-200/80 hover:text-white transition-colors">Contact Support</Link>
           </li>
-          <li>
-            <Link to="/terms" className="text-emerald-200/80 hover:text-white transition-colors">SMS Policy</Link>
-          </li>
+          
         </ul>
         <a
           href={`tel:${BUSINESS_PHONE.replace(/[^\d+]/g, '')}`}
