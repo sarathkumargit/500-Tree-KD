@@ -27,7 +27,6 @@ const Contact = () => (
       </div>
     </section>
 
-    {/* Contact panels */}
     <section className="py-16">
       <Container>
         <div className="grid md:grid-cols-2 gap-6">
