@@ -15,10 +15,10 @@ const Body = ({ children }) => (
 
 const Privacy = () => (
   <div>
-    <section className="relative h-56 sm:h-64 overflow-hidden">
+    <section className=" relative h-56 sm:h-64 overflow-hidden">
       <img src={privacyBg} alt="" className="absolute inset-0 w-full h-full object-cover scale-105" loading="eager" />
       <div className="absolute inset-0 bg-emerald-900/80" />
-      <div className="relative z-10 h-full flex flex-col justify-center pt-16 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
+      <div className="mt-10 relative z-10 h-full flex flex-col justify-center pt-16 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
         <p className="font-medium text-sm tracking-widest uppercase mb-3 text-emerald-300">Legal</p>
         <h1 className="text-3xl md:text-4xl font-semibold text-white mb-3">Privacy Policy</h1>
         <p className="text-base text-emerald-100/80">Effective Date: January 19, 2025 | Last Updated: July 9, 2026</p>
