@@ -6,7 +6,7 @@ import hero4 from '../../assets/hero4.webp'
 import g2    from '../../assets/g2.webp'
 
 // hero1 lives in /public so the browser can preload it before JS runs (LCP fix)
-const HERO1_URL = '/hero1.webp.'
+const HERO1_URL = '/hero1.webp'
 
 const images = [HERO1_URL, img8, hero3, hero4, g2]
 
