@@ -23,7 +23,7 @@ const Navbar = () => {
         className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3 transition-all duration-300"
       >
         <Link to="/" className="flex items-center gap-2 font-display font-semibold text-lg text-canopy">
-          <img src={BUSINESS_LOGO} alt="Business Logo" className="h-12 rounded-3xl w-auto" />
+          <img src={BUSINESS_LOGO} alt="Business Logo" className="h-12 rounded-3xl w-auto" width={48} height={48} />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">

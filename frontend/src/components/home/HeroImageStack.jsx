@@ -44,20 +44,21 @@ const HeroImageStack = () => {
         if (offset < -images.length / 2) offset += images.length
 
         return (
-          <img
-            key={src}
-            src={src}
-            alt=""
-            role="presentation"
-            onClick={() => setActive(i)}
-            /* i===0 is the LCP image — eager + high priority */
-            loading={i === 0 ? 'eager' : 'lazy'}
-            fetchPriority={i === 0 ? 'high' : 'auto'}
-            decoding={i === 0 ? 'sync' : 'async'}
-            width={1920}
-            height={1080}
-            tabIndex={-1}
-            className="absolute inset-0 w-full h-full object-cover cursor-pointer transition-all duration-700 ease-out"
+         <img
+  key={src}
+  src={src}
+  alt=""
+  role="presentation"
+  onClick={() => setActive(i)}
+  loading={i === 0 ? 'eager' : 'lazy'}
+  fetchPriority={i === 0 ? 'high' : 'auto'}
+  decoding={i === 0 ? 'sync' : 'async'}
+  width={1920}
+  height={1080}
+  sizes="100vw"  
+  tabIndex={-1}
+  className="absolute inset-0 w-full h-full object-cover cursor-pointer transition-all duration-700 ease-out"
+
             style={{
               transform: `translateX(${offset * translateStep}%) translateZ(${-Math.abs(offset) * depthStep}px) rotateY(${offset * rotateStep}deg) scale(${1 - Math.abs(offset) * scaleStep})`,
               opacity: Math.abs(offset) > 1 ? 0 : 1 - Math.abs(offset) * 0.35,

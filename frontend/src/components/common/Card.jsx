@@ -5,7 +5,7 @@ const Card = ({ image, icon, title, description, children, className = '' }) => 
     'bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/60 hover:-translate-y-1 transition-transform duration-300',
     className
   )}>
-    {image && <img src={image} alt={title} className="w-full h-40 object-cover" />}
+  {image && <img src={image} alt={title} className="w-full h-40 object-cover" width={640} height={160} loading="lazy" decoding="async" />}
     <div className="p-6 flex flex-col items-center text-center">
       {icon && (
         <div className="bg-emerald-100 w-10 h-10 flex items-center justify-center rounded-xl text-forest mb-4">
