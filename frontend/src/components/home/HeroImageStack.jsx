@@ -6,7 +6,7 @@ import hero4 from '../../assets/hero4.webp'
 import g2    from '../../assets/g2.webp'
 
 // hero1 lives in /public so the browser can preload it before JS runs (LCP fix)
-const HERO1_URL = '/public/hero1.webp'
+const HERO1_URL = '/hero1.webp.'
 
 const images = [HERO1_URL, img8, hero3, hero4, g2]
 
@@ -50,9 +50,9 @@ const HeroImageStack = () => {
   alt=""
   role="presentation"
   onClick={() => setActive(i)}
-  loading={i === 0 ? 'eager' : 'lazy'}
-  fetchPriority={i === 0 ? 'high' : 'auto'}
-  decoding={i === 0 ? 'sync' : 'async'}
+  loading={i <= 1 ? 'eager' : 'lazy'}
+fetchPriority={i === 0 ? 'high' : i === 1 ? 'low' : 'auto'}
+decoding={i <= 1 ? 'sync' : 'async'}
   width={1920}
   height={1080}
   sizes="100vw"  
