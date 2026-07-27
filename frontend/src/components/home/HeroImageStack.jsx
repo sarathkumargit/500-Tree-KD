@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
-
 import img8  from '../../assets/img8.webp'
 import hero3 from '../../assets/hero3.webp'
 import hero4 from '../../assets/hero4.webp'
-import g2    from '../../assets/g2.webp'
+
 
 const HERO1_URL = '/g2.webp'
 
-const images = [HERO1_URL, img8, hero3, hero4, g2]
+const images = [HERO1_URL, img8, hero3, hero4]
 
 const HeroImageStack = () => {
   const [active, setActive] = useState(0)
@@ -74,6 +73,8 @@ const HeroImageStack = () => {
             key={i}
             onClick={() => setActive(i)}
             aria-label={`Show hero image ${i + 1}`}
+            className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full transition-colors ${i === active ? 'bg-emerald-400' : 'bg-white/50'}`}
+            
          
           />
         ))}
