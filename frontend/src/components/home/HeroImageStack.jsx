@@ -57,7 +57,7 @@ const HeroImageStack = () => {
               height={1080}
               sizes="100vw"
               tabIndex={-1}
-              className="absolute inset-0 w-full h-full object-cover cursor-pointer transition-all duration-700 ease-out"
+              className="absolute inset-0 w-full h-full object-cover cursor-pointer transition-[transform,opacity] duration-700 ease-out"
               style={{
                 transform: `translateX(${offset * translateStep}%) translateZ(${-Math.abs(offset) * depthStep}px) rotateY(${offset * rotateStep}deg) scale(${1 - Math.abs(offset) * scaleStep})`,
                 opacity: Math.abs(offset) > 1 ? 0 : 1 - Math.abs(offset) * 0.35,
