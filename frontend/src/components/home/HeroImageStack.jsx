@@ -5,7 +5,7 @@ import hero3 from '../../assets/hero3.webp'
 import hero4 from '../../assets/hero4.webp'
 import g2    from '../../assets/g2.webp'
 
-const HERO1_URL = '/hero1.webp'
+const HERO1_URL = '/g2.webp'
 
 const images = [HERO1_URL, img8, hero3, hero4, g2]
 
