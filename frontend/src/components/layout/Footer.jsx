@@ -70,7 +70,7 @@ const Footer = () => (
       </div>
     </div>
 
-    <div className="border-t border-emerald-800 py-5 text-center text-xs text-emerald-200/40">
+    <div className="border-t border-emerald-800 py-5 text-center text-xs text-emerald-200/80">
       © {new Date().getFullYear()} {BUSINESS_NAME}. All rights reserved.
     </div>
   </footer>

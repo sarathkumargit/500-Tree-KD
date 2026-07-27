@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://500-tree-kd.vercel.app/sitemap.xml

@@ -1,0 +1,8 @@
+# 500 Tree Services
+
+Professional tree care services including removal, trimming, pruning, and stump removal.
+
+## Services
+- [Tree Removal](https://500-tree-kd.vercel.app/services)
+- [Tree Trimming](https://500-tree-kd.vercel.app/services)
+- [Contact](https://500-tree-kd.vercel.app/contact)
