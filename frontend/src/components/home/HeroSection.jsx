@@ -16,7 +16,7 @@ const HeroSection = () => (
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] sm:w-[85%] md:w-auto md:max-w-xl p-5 sm:p-6 md:p-8 z-30"
       >
         <h1 className="text-emerald-300 text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight mb-2 text-center">
-          {BUSINESS_NAME} Services
+          {BUSINESS_NAME} 
         </h1>
         <p className="text-emerald-100 text-sm sm:text-base md:text-lg leading-relaxed mb-6 text-center">
           Preserving the beauty and safety of your landscape with professional arboriculture
