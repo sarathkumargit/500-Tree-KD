@@ -1,26 +1,26 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Home from '../pages/Home'
-import About from '../pages/About'
-import Services from '../pages/Services'
-import Gallery from '../pages/Gallery'
-// import Locations from '../pages/Locations'
-import Contact from '../pages/Contact'
-import Terms from '../pages/Terms'
-import Privacy from '../pages/Privacy'
-//import NotFound from '../pages/NotFound'
+import Home from '../pages/Home'  // Keep Home eager (first page)
+
+const About   = lazy(() => import('../pages/About'))
+const Services = lazy(() => import('../pages/Services'))
+const Gallery  = lazy(() => import('../pages/Gallery'))
+const Contact  = lazy(() => import('../pages/Contact'))
+const Terms    = lazy(() => import('../pages/Terms'))
+const Privacy  = lazy(() => import('../pages/Privacy'))
 
 const AppRoutes = () => (
-  <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/about" element={<About />} />
-    <Route path="/services" element={<Services />} />
-    <Route path="/gallery" element={<Gallery />} />
-    {/* <Route path="/locations" element={<Locations />} /> */}
-    <Route path="/contact" element={<Contact />} />
-    <Route path="/terms" element={<Terms />} />
-    <Route path="/privacy" element={<Privacy />} />
-    {/* <Route path="*" element={<NotFound />} /> */}
-  </Routes>
+  <Suspense fallback={null}>
+    <Routes>
+      <Route path="/"        element={<Home />} />
+      <Route path="/about"   element={<About />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/gallery" element={<Gallery />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/terms"   element={<Terms />} />
+      <Route path="/privacy" element={<Privacy />} />
+    </Routes>
+  </Suspense>
 )
 
 export default AppRoutes
